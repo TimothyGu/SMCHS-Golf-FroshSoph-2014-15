@@ -2,6 +2,7 @@ Chart.defaults.global.responsive = true
 Chart.defaults.global.multiTooltipTemplate = '<%= value.toFixed(2) %>'
 //Chart.defaults.global.maintainAspectRatio = false
 Chart.defaults.Line.bezierCurveTension = 0.1
+Chart.defaults.animation = false
 
 function makeChart (id, datasets) {
   var e = document.getElementById(id)
