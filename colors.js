@@ -2,8 +2,8 @@
 //   colors_returned: datasets.length
 // , full_random: true
 // })
-var colors = [ '#e6e4ad', '#334a39', '#e6c344', '#264757', '#93858c'
-             , '#030402', '#3a290d', '#d2fcf6', '#234f98', '#47723a'
+var colors = [ '#e6e4ad', '#41ff41', '#e6c344', '#ffcb97', '#93858c'
+             , '#030402', '#c552ff', '#d2fcf6', '#234f98', '#47723a'
              , '#79271c'
              ]
 
