@@ -22,6 +22,9 @@
     <div class="tab-content">
       <div role="tabpanel" class="tab-pane active" id="main">
         <canvas id="mainChart"></canvas>
+        <button class="btn btn-default center-block" id="clear">
+          Clear
+        </button>
       </div>
     </div>
     </div>
@@ -57,6 +60,46 @@
       $e.removeClass('avg')
       state = 'main'
       revertToOrig(chart.datasets)
+      chart.update()
+    })
+
+    var blank = '#eee'
+
+    var $legend = $('#legend')
+    $legend.children().each(function (index) {
+      var $this = $(this)
+      $this.click(function () {
+        if ($legend.hasClass('selected')) {
+          toggleColor(index)
+          chart.update()
+          return
+        }
+        for (var i = 0; i < chart.datasets.length; i ++) {
+          if (i === index) {
+            chart.datasets[i].strokeColor = colors[i]
+          } else {
+            chart.datasets[i].strokeColor = blank
+          }
+        }
+        $legend.addClass('selected')
+        chart.update()
+      })
+      // $this.mouseenter(toggleColor.bind(null, index))
+      // $this.mouseleave(toggleColor.bind(null, index))
+    })
+
+    function toggleColor (i) {
+      var data = chart.datasets[i]
+      if (data.strokeColor === blank) {
+        data.strokeColor = colors[i]
+      } else {
+        data.strokeColor = blank
+      }
+    }
+
+    $('#clear').click(function () {
+      addColors(chart.datasets)
+      $legend.removeClass('selected')
       chart.update()
     })
   </script>
