@@ -17,9 +17,9 @@ var courses = [
 , 'Tijeras Creek'
 , 'Arroyo Trabuco'
 , 'Los Amigos'
-/*
 , 'Casta del Sol'
-, 'Recreation Park'
+/*
+, 'Little Rec'
 , 'Casta del Sol'
 , 'Baker'
 */
@@ -46,7 +46,7 @@ var origDatasets = [
           , 6
           , 14
           , 11
-          , null
+          , 4
           , null
           , null
           , null
@@ -72,7 +72,7 @@ var origDatasets = [
           , 12
           , 12
           , 10
-          , null
+          , 7
           , null
           , null
           , null
@@ -98,7 +98,7 @@ var origDatasets = [
           , 8
           , 5
           , 8
-          , null
+          , 9
           , null
           , null
           , null
@@ -124,7 +124,7 @@ var origDatasets = [
           , 19
           , 14
           , 9
-          , null
+          , 16
           , null
           , null
           , null
@@ -176,7 +176,7 @@ var origDatasets = [
           , 16
           , null
           , 11
-          , null
+          , 17
           , null
           , null
           , null
@@ -254,7 +254,7 @@ var origDatasets = [
           , null
           , 14
           , 3
-          , null
+          , 10
           , null
           , null
           , null
@@ -280,7 +280,7 @@ var origDatasets = [
           , 14
           , 8
           , 10
-          , null
+          , 9
           , null
           , null
           , null
@@ -306,7 +306,7 @@ var origDatasets = [
           , 9
           , 6
           , 1
-          , null
+          , 9
           , null
           , null
           , null
