@@ -1,31 +1,4 @@
-var courses = [
-  'Tijeras Creek'
-, 'Los Serranos'
-, 'Tijeras Creek'
-, 'San Juan Hills'
-, 'Tijeras Creek'
-, 'Casta del Sol'
-, 'Meadowlark'
-, 'Casta del Sol'
-, 'Casta del Sol'
-, 'Casta del Sol'
-, 'Casta del Sol'
-, 'Willowick'
-, 'Tustin Ranch'
-, 'Links @ Summerly'
-, 'Black Gold'
-, 'Tijeras Creek'
-, 'Arroyo Trabuco'
-, 'Los Amigos'
-, 'Casta del Sol'
-/*
-, 'Little Rec'
-, 'Casta del Sol'
-, 'Baker'
-*/
-]
-
-var origDatasets = [
+module.exports = [
   {
     label: 'Chris Beals'
   , data: [ 23
@@ -47,7 +20,7 @@ var origDatasets = [
           , 14
           , 11
           , 4
-          , null
+          , 6
           , null
           , null
           ]
@@ -73,7 +46,7 @@ var origDatasets = [
           , 12
           , 10
           , 7
-          , null
+          , 7
           , null
           , null
           ]
@@ -99,7 +72,7 @@ var origDatasets = [
           , 5
           , 8
           , 9
-          , null
+          , 5
           , null
           , null
           ]
@@ -125,7 +98,7 @@ var origDatasets = [
           , 14
           , 9
           , 16
-          , null
+          , 9
           , null
           , null
           ]
@@ -229,7 +202,7 @@ var origDatasets = [
           , 7
           , null
           , null
-          , null
+          , 14
           , null
           , null
           ]
@@ -255,7 +228,7 @@ var origDatasets = [
           , 14
           , 3
           , 10
-          , null
+          , 7
           , null
           , null
           ]
@@ -281,7 +254,7 @@ var origDatasets = [
           , 8
           , 10
           , 9
-          , null
+          , 11
           , null
           , null
           ]
@@ -307,9 +280,36 @@ var origDatasets = [
           , 6
           , 1
           , 9
-          , null
+          , 9
           , null
           , null
           ]
   }
+]
+
+module.exports.courses = [
+  'Tijeras Creek'
+, 'Los Serranos'
+, 'Tijeras Creek'
+, 'San Juan Hills'
+, 'Tijeras Creek'
+, 'Casta del Sol'
+, 'Meadowlark'
+, 'Casta del Sol'
+, 'Casta del Sol'
+, 'Casta del Sol'
+, 'Casta del Sol'
+, 'Willowick'
+, 'Tustin Ranch'
+, 'Links @ Summerly'
+, 'Black Gold'
+, 'Tijeras Creek'
+, 'Arroyo Trabuco'
+, 'Los Amigos'
+, 'Casta del Sol'
+, 'Little Rec'
+/*
+, 'Casta del Sol'
+, 'Baker'
+*/
 ]

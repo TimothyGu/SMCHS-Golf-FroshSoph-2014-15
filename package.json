@@ -1,0 +1,30 @@
+{
+  "name": "golf",
+  "private": true,
+  "version": "1.0.0",
+  "description": "Golf rankings from SM.",
+  "main": "average.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  , "build": "browserify main.js > out.js && uglifyjs out.js --source-map out.min.map -c -m > out.min.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/TimothyGu/golf.git"
+  },
+  "author": "",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/TimothyGu/golf/issues"
+  },
+  "homepage": "https://github.com/TimothyGu/golf#readme",
+  "dependencies": {
+    "chart.js": "nnnick/Chart.js#v1.0.2",
+    "jquery": "^2.1.4",
+    "uglifyify": "^3.0.1",
+    "uglifyjs": "^2.4.10"
+  },
+  "devDependencies": {
+    "browserify": "^9.0.8"
+  }
+}
