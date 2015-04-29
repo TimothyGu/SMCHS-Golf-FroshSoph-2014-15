@@ -21,10 +21,7 @@
   "dependencies": {
     "chart.js": "nnnick/Chart.js#v1.0.2",
     "jquery": "^2.1.4",
-    "uglifyify": "^3.0.1",
-    "uglifyjs": "^2.4.10"
-  },
-  "devDependencies": {
+    "uglifyjs": "^2.4.10",
     "browserify": "^9.0.8"
   }
 }
