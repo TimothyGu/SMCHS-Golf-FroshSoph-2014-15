@@ -4,6 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
+  <link rel="stylesheet" href="node_modules/sortable/css/sortable-theme-bootstrap.css">
   <link rel="stylesheet" href="style.css">
   <title>Timothy’s Golf Stats</title>
 </head>
@@ -16,7 +17,10 @@
         <a href="#main" data-toggle="tab">Over Par</a>
       </li>
       <li role="presentation">
-        <a href="#avg" data-toggle="tab">Moving Average</a>
+        <a href="#main" data-toggle="tab">Moving Average</a>
+      </li>
+      <li role="presentation">
+        <a href="#table" data-toggle="tab">Table</a>
       </li>
     </ul>
     <div class="tab-content">
@@ -25,6 +29,9 @@
         <button class="btn btn-default center-block" id="clear">
           Clear
         </button>
+      </div>
+      <div role="tabpanel" class="tab-pane" id="table">
+        <div class="table-responsive" id="mainTable"></div>
       </div>
     </div>
     </div>
@@ -39,6 +46,7 @@
 
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+  <script src="node_modules/sortable/js/sortable.min.js"></script>
   <script src="out.min.js"></script>
 </body>
 </html>
