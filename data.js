@@ -21,7 +21,7 @@ module.exports = [
           , 11
           , 4
           , 6
-          , null
+          , 9
           , null
           ]
   }
@@ -47,7 +47,7 @@ module.exports = [
           , 10
           , 7
           , 7
-          , null
+          , 8
           , null
           ]
   }
@@ -73,7 +73,7 @@ module.exports = [
           , 8
           , 9
           , 5
-          , null
+          , 5
           , null
           ]
   }
@@ -99,7 +99,7 @@ module.exports = [
           , 9
           , 16
           , 9
-          , null
+          , 8
           , null
           ]
   }
@@ -151,7 +151,7 @@ module.exports = [
           , 11
           , 17
           , null
-          , null
+          , 13
           , null
           ]
   }
@@ -177,7 +177,7 @@ module.exports = [
           , null
           , null
           , null
-          , null
+          , 11
           , null
           ]
   }
@@ -203,7 +203,7 @@ module.exports = [
           , null
           , null
           , 14
-          , null
+          , 9
           , null
           ]
   }
@@ -281,7 +281,7 @@ module.exports = [
           , 1
           , 9
           , 9
-          , null
+          , 6
           , null
           ]
   }
@@ -308,8 +308,8 @@ module.exports.courses = [
 , 'Los Amigos'
 , 'Casta del Sol'
 , 'Little Rec'
-/*
 , 'Casta del Sol'
+/*
 , 'Baker'
 */
 ]
