@@ -6,7 +6,7 @@
   "main": "average.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
-  , "build": "browserify main.js > out.js && uglifyjs out.js --source-map out.min.map -c -m > out.min.js"
+  , "build": "browserify main.js -s chart > out.js && uglifyjs out.js --source-map out.min.map -c -m > out.min.js"
   },
   "repository": {
     "type": "git",

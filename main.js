@@ -5,6 +5,7 @@ var colors = require('./colors')
 
 colors.add(datasets)
 var chart = makeChart('mainChart', datasets)
+module.exports = chart
 var state = 'main'
 
 $('#navTab a[href="#avg"]').click(function (e) {
