@@ -99,7 +99,7 @@ module.exports = [
           , 4
           , 6
           , 9
-          , null
+          , 9
           ]
   }
 , {
@@ -125,7 +125,7 @@ module.exports = [
           , 7
           , 7
           , 8
-          , null
+          , 4
           ]
   }
 , {
@@ -151,7 +151,7 @@ module.exports = [
           , 9
           , 5
           , 5
-          , null
+          , 12
           ]
   }
 , {
@@ -177,7 +177,7 @@ module.exports = [
           , 16
           , 9
           , 8
-          , null
+          , 13
           ]
   }
 , {
@@ -255,7 +255,7 @@ module.exports = [
           , null
           , null
           , 11
-          , null
+          , 14
           ]
   }
 , {
@@ -307,7 +307,7 @@ module.exports = [
           , 10
           , 7
           , null
-          , null
+          , 3
           ]
   }
 , {
@@ -333,7 +333,7 @@ module.exports = [
           , 9
           , 11
           , null
-          , null
+          , 9
           ]
   }
 , {
@@ -359,7 +359,7 @@ module.exports = [
           , 9
           , 9
           , 6
-          , null
+          , 4
           ]
   }
 ]
@@ -386,9 +386,7 @@ module.exports.courses = [
 , 'Casta del Sol'
 , 'Little Rec'
 , 'Casta del Sol'
-/*
-, 'Baker'
-*/
+, 'David L. Baker'
 ]
 
 },{}],5:[function(require,module,exports){
@@ -3989,7 +3987,7 @@ var _ENCODE_HTML_RULES = {
 ;
 
 var __line = 1
-  , __lines = "<table class=\"table sortable-theme-bootstrap\" data-sortable>\n<% var short = {\n     'Tijeras Creek'      : 'TC'\n   , 'Casta del Sol'      : 'CdS'\n   , 'Los Serranos'       : 'LS'\n   , 'San Juan Hills'     : 'SJH'\n   , 'Meadowlark'         : 'M'\n   , 'Willowick'          : 'W'\n   , 'Tustin Ranch'       : 'TR'\n   , 'Links @ Summerly'   : 'L@S'\n   , 'Black Gold'         : 'BG'\n   , 'Arroyo Trabuco'     : 'AT'\n   , 'Los Amigos'         : 'LA'\n   , 'Little Rec'         : 'LR'\n   , 'Total # of matches' : 'Tot'\n   , 'Average'            : 'Avg'\n   , 'Match average'      : 'MAvg'\n   , 'Improvement'        : 'Imp'\n   } -%>\n<% function rank (arr) {\n     return arr.slice().map(function(v){ return sorted.indexOf(v)+1 })\n   } -%>\n<thead>\n  <tr>\n    <th>Player</th>\n    <% for (var i = 0; i < courses.length; i ++) { -%>\n      <th><%= short[courses[i]] %></th>\n    <% } -%>\n    <th>Tot</th>\n    <th>Avg</th>\n    <th>MAvg</th>\n    <th>Imp</th>\n  </tr>\n</thead>\n<tbody>\n  <% for (var i = 0; i < players.length; i ++) { -%>\n    <% var data = players[i] -%>\n    <% var tot = 0, sum, mSum = 0 -%>\n    <tr>\n      <th data-sortable=\"false\"\n          data-value=\"<%= data.label.split(' ').reverse().join(', ') %>\">\n        <%= data.label.split(' ')[1] %>\n      </th>\n      <td><%= data.data[0] %></td>\n      <% sum = data.data[0] -%>\n      <% for (var j = 1; j < courses.length; j ++) { -%>\n        <% if (data.data[j] == null) { -%>\n          <td data-value=\"9999999999\"></td>\n          <% continue -%>\n        <% } -%>\n        <td>\n          <%= data.data[j] %>\n          <% tot ++ -%>\n          <% sum += data.data[j] -%>\n          <% mSum += data.data[j] -%>\n        </td>\n      <% } -%>\n      <th data-sortable=\"false\"><%= tot %></th>\n      <th data-sortable=\"false\"><%= ( sum / (tot + 1)               ).toFixed(2) %></th>\n      <th data-sortable=\"false\"><%= (mSum /  tot                    ).toFixed(2) %></th>\n      <th data-sortable=\"false\"><%= (mSum /  tot      - data.data[0]).toFixed(2) %></th>\n    </tr>\n  <% } -%>\n</tbody>\n</table>\n<dl class=\"dl-horizontal\">\n  <dt>Shorthands</dt><dd></dd>\n  <% var keys = Object.keys(short) -%>\n  <% for (var i = 0; i < keys.length; i ++) { -%>\n    <dt><%= short[keys[i]] %></dt>\n    <dd><%= keys[i] %></dd>\n  <% } -%>\n</dl>\n"
+  , __lines = "<table class=\"table sortable-theme-bootstrap\" data-sortable>\n<% var short = {\n     'Tijeras Creek'      : 'TC'\n   , 'Casta del Sol'      : 'CdS'\n   , 'Los Serranos'       : 'LS'\n   , 'San Juan Hills'     : 'SJH'\n   , 'Meadowlark'         : 'M'\n   , 'Willowick'          : 'W'\n   , 'Tustin Ranch'       : 'TR'\n   , 'Links @ Summerly'   : 'L@S'\n   , 'Black Gold'         : 'BG'\n   , 'Arroyo Trabuco'     : 'AT'\n   , 'Los Amigos'         : 'LA'\n   , 'Little Rec'         : 'LR'\n   , 'David L. Baker'     : 'DB'\n   , 'Total # of matches' : 'Tot'\n   , 'Average'            : 'Avg'\n   , 'Match average'      : 'MAvg'\n   , 'Improvement'        : 'Imp'\n   } -%>\n<% function rank (arr) {\n     return arr.slice().map(function(v){ return sorted.indexOf(v)+1 })\n   } -%>\n<thead>\n  <tr>\n    <th>Player</th>\n    <% for (var i = 0; i < courses.length; i ++) { -%>\n      <th><%= short[courses[i]] %></th>\n    <% } -%>\n    <th>Tot</th>\n    <th>Avg</th>\n    <th>MAvg</th>\n    <th>Imp</th>\n  </tr>\n</thead>\n<tbody>\n  <% for (var i = 0; i < players.length; i ++) { -%>\n    <% var data = players[i] -%>\n    <% var tot = 0, sum, mSum = 0 -%>\n    <tr>\n      <th data-sortable=\"false\"\n          data-value=\"<%= data.label.split(' ').reverse().join(', ') %>\">\n        <%= data.label.split(' ')[1] %>\n      </th>\n      <td><%= data.data[0] %></td>\n      <% sum = data.data[0] -%>\n      <% for (var j = 1; j < courses.length; j ++) { -%>\n        <% if (data.data[j] == null) { -%>\n          <td data-value=\"9999999999\"></td>\n          <% continue -%>\n        <% } -%>\n        <td>\n          <%= data.data[j] %>\n          <% tot ++ -%>\n          <% sum += data.data[j] -%>\n          <% mSum += data.data[j] -%>\n        </td>\n      <% } -%>\n      <th data-sortable=\"false\"><%= tot %></th>\n      <th data-sortable=\"false\"><%= ( sum / (tot + 1)               ).toFixed(2) %></th>\n      <th data-sortable=\"false\"><%= (mSum /  tot                    ).toFixed(2) %></th>\n      <th data-sortable=\"false\"><%= (mSum /  tot      - data.data[0]).toFixed(2) %></th>\n    </tr>\n  <% } -%>\n</tbody>\n</table>\n<dl class=\"dl-horizontal\">\n  <dt>Shorthands</dt><dd></dd>\n  <% var keys = Object.keys(short) -%>\n  <% for (var i = 0; i < keys.length; i ++) { -%>\n    <dt><%= short[keys[i]] %></dt>\n    <dd><%= keys[i] %></dd>\n  <% } -%>\n</dl>\n"
   , __filename = undefined;
 try {
   var __output = [];
@@ -4009,6 +4007,7 @@ var short = {
    , 'Arroyo Trabuco'     : 'AT'
    , 'Los Amigos'         : 'LA'
    , 'Little Rec'         : 'LR'
+   , 'David L. Baker'     : 'DB'
    , 'Total # of matches' : 'Tot'
    , 'Average'            : 'Avg'
    , 'Match average'      : 'MAvg'

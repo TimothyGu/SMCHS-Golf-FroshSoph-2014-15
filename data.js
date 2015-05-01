@@ -22,7 +22,7 @@ module.exports = [
           , 4
           , 6
           , 9
-          , null
+          , 9
           ]
   }
 , {
@@ -48,7 +48,7 @@ module.exports = [
           , 7
           , 7
           , 8
-          , null
+          , 4
           ]
   }
 , {
@@ -74,7 +74,7 @@ module.exports = [
           , 9
           , 5
           , 5
-          , null
+          , 12
           ]
   }
 , {
@@ -100,7 +100,7 @@ module.exports = [
           , 16
           , 9
           , 8
-          , null
+          , 13
           ]
   }
 , {
@@ -178,7 +178,7 @@ module.exports = [
           , null
           , null
           , 11
-          , null
+          , 14
           ]
   }
 , {
@@ -230,7 +230,7 @@ module.exports = [
           , 10
           , 7
           , null
-          , null
+          , 3
           ]
   }
 , {
@@ -256,7 +256,7 @@ module.exports = [
           , 9
           , 11
           , null
-          , null
+          , 9
           ]
   }
 , {
@@ -282,7 +282,7 @@ module.exports = [
           , 9
           , 9
           , 6
-          , null
+          , 4
           ]
   }
 ]
@@ -309,7 +309,5 @@ module.exports.courses = [
 , 'Casta del Sol'
 , 'Little Rec'
 , 'Casta del Sol'
-/*
-, 'Baker'
-*/
+, 'David L. Baker'
 ]
