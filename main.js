@@ -66,7 +66,7 @@ $('#clear').click(function () {
   chart.update()
 })
 
-window.table = $('#mainTable').html(table({
+var table = window.table = $('#mainTable').html(table({
   courses: datasets.courses
 , players: datasets
 })).children().first().dataTable({
@@ -76,3 +76,4 @@ window.table = $('#mainTable').html(table({
 , paging   : false
 */
 })
+// new $.fn.dataTable.FixedColumns(table)
