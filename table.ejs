@@ -1,4 +1,4 @@
-<table class="table sortable-theme-bootstrap" data-sortable>
+<table class="table" data-searching="false" data-paging="false" data-scrollX="true">
 <% var short = {
      'Tijeras Creek'      : 'TC'
    , 'Casta del Sol'      : 'CdS'
@@ -38,15 +38,14 @@
     <% var data = players[i] -%>
     <% var tot = 0, sum, mSum = 0 -%>
     <tr>
-      <th data-sortable="false"
-          data-value="<%= data.label.split(' ').reverse().join(', ') %>">
+      <th data-value="<%= data.label.split(' ').reverse().join(', ') %>">
         <%= data.label.split(' ')[1] %>
       </th>
       <td><%= data.data[0] %></td>
       <% sum = data.data[0] -%>
       <% for (var j = 1; j < courses.length; j ++) { -%>
         <% if (data.data[j] == null) { -%>
-          <td data-value="9999999999"></td>
+          <td></td>
           <% continue -%>
         <% } -%>
         <td>
@@ -56,10 +55,10 @@
           <% mSum += data.data[j] -%>
         </td>
       <% } -%>
-      <th data-sortable="false"><%= tot %></th>
-      <th data-sortable="false"><%= ( sum / (tot + 1)               ).toFixed(2) %></th>
-      <th data-sortable="false"><%= (mSum /  tot                    ).toFixed(2) %></th>
-      <th data-sortable="false"><%= (mSum /  tot      - data.data[0]).toFixed(2) %></th>
+      <th><%= tot %></th>
+      <th><%= ( sum / (tot + 1)               ).toFixed(2) %></th>
+      <th><%= (mSum /  tot                    ).toFixed(2) %></th>
+      <th><%= (mSum /  tot      - data.data[0]).toFixed(2) %></th>
     </tr>
   <% } -%>
 </tbody>

@@ -42,12 +42,12 @@ var _ENCODE_HTML_RULES = {
 ;
 
 var __line = 1
-  , __lines = "<table class=\"table sortable-theme-bootstrap\" data-sortable>\n<% var short = {\n     'Tijeras Creek'      : 'TC'\n   , 'Casta del Sol'      : 'CdS'\n   , 'Los Serranos'       : 'LS'\n   , 'San Juan Hills'     : 'SJH'\n   , 'Meadowlark'         : 'M'\n   , 'Willowick'          : 'W'\n   , 'Tustin Ranch'       : 'TR'\n   , 'Links @ Summerly'   : 'L@S'\n   , 'Black Gold'         : 'BG'\n   , 'Arroyo Trabuco'     : 'AT'\n   , 'Los Amigos'         : 'LA'\n   , 'Little Rec'         : 'LR'\n   , 'David L. Baker'     : 'DB'\n   , 'Total # of matches' : 'Tot'\n   , 'Average'            : 'Avg'\n   , 'Match average'      : 'MAvg'\n   , 'Improvement'        : 'Imp'\n   } -%>\n<% function rank (arr) {\n     return arr.slice().map(function(v){ return sorted.indexOf(v)+1 })\n   } -%>\n<thead>\n  <tr>\n    <th>Player</th>\n    <% for (var i = 0; i < courses.length; i ++) { -%>\n      <th><%= short[courses[i]] %></th>\n    <% } -%>\n    <th>Tot</th>\n    <th>Avg</th>\n    <th>MAvg</th>\n    <th>Imp</th>\n  </tr>\n</thead>\n<tbody>\n  <% for (var i = 0; i < players.length; i ++) { -%>\n    <% var data = players[i] -%>\n    <% var tot = 0, sum, mSum = 0 -%>\n    <tr>\n      <th data-sortable=\"false\"\n          data-value=\"<%= data.label.split(' ').reverse().join(', ') %>\">\n        <%= data.label.split(' ')[1] %>\n      </th>\n      <td><%= data.data[0] %></td>\n      <% sum = data.data[0] -%>\n      <% for (var j = 1; j < courses.length; j ++) { -%>\n        <% if (data.data[j] == null) { -%>\n          <td data-value=\"9999999999\"></td>\n          <% continue -%>\n        <% } -%>\n        <td>\n          <%= data.data[j] %>\n          <% tot ++ -%>\n          <% sum += data.data[j] -%>\n          <% mSum += data.data[j] -%>\n        </td>\n      <% } -%>\n      <th data-sortable=\"false\"><%= tot %></th>\n      <th data-sortable=\"false\"><%= ( sum / (tot + 1)               ).toFixed(2) %></th>\n      <th data-sortable=\"false\"><%= (mSum /  tot                    ).toFixed(2) %></th>\n      <th data-sortable=\"false\"><%= (mSum /  tot      - data.data[0]).toFixed(2) %></th>\n    </tr>\n  <% } -%>\n</tbody>\n</table>\n<dl class=\"dl-horizontal\">\n  <dt>Shorthands</dt><dd></dd>\n  <% var keys = Object.keys(short) -%>\n  <% for (var i = 0; i < keys.length; i ++) { -%>\n    <dt><%= short[keys[i]] %></dt>\n    <dd><%= keys[i] %></dd>\n  <% } -%>\n</dl>\n"
+  , __lines = "<table class=\"table\" data-searching=\"false\" data-paging=\"false\" data-scrollX=\"true\">\n<% var short = {\n     'Tijeras Creek'      : 'TC'\n   , 'Casta del Sol'      : 'CdS'\n   , 'Los Serranos'       : 'LS'\n   , 'San Juan Hills'     : 'SJH'\n   , 'Meadowlark'         : 'M'\n   , 'Willowick'          : 'W'\n   , 'Tustin Ranch'       : 'TR'\n   , 'Links @ Summerly'   : 'L@S'\n   , 'Black Gold'         : 'BG'\n   , 'Arroyo Trabuco'     : 'AT'\n   , 'Los Amigos'         : 'LA'\n   , 'Little Rec'         : 'LR'\n   , 'David L. Baker'     : 'DB'\n   , 'Total # of matches' : 'Tot'\n   , 'Average'            : 'Avg'\n   , 'Match average'      : 'MAvg'\n   , 'Improvement'        : 'Imp'\n   } -%>\n<% function rank (arr) {\n     return arr.slice().map(function(v){ return sorted.indexOf(v)+1 })\n   } -%>\n<thead>\n  <tr>\n    <th>Player</th>\n    <% for (var i = 0; i < courses.length; i ++) { -%>\n      <th><%= short[courses[i]] %></th>\n    <% } -%>\n    <th>Tot</th>\n    <th>Avg</th>\n    <th>MAvg</th>\n    <th>Imp</th>\n  </tr>\n</thead>\n<tbody>\n  <% for (var i = 0; i < players.length; i ++) { -%>\n    <% var data = players[i] -%>\n    <% var tot = 0, sum, mSum = 0 -%>\n    <tr>\n      <th data-value=\"<%= data.label.split(' ').reverse().join(', ') %>\">\n        <%= data.label.split(' ')[1] %>\n      </th>\n      <td><%= data.data[0] %></td>\n      <% sum = data.data[0] -%>\n      <% for (var j = 1; j < courses.length; j ++) { -%>\n        <% if (data.data[j] == null) { -%>\n          <td></td>\n          <% continue -%>\n        <% } -%>\n        <td>\n          <%= data.data[j] %>\n          <% tot ++ -%>\n          <% sum += data.data[j] -%>\n          <% mSum += data.data[j] -%>\n        </td>\n      <% } -%>\n      <th><%= tot %></th>\n      <th><%= ( sum / (tot + 1)               ).toFixed(2) %></th>\n      <th><%= (mSum /  tot                    ).toFixed(2) %></th>\n      <th><%= (mSum /  tot      - data.data[0]).toFixed(2) %></th>\n    </tr>\n  <% } -%>\n</tbody>\n</table>\n<dl class=\"dl-horizontal\">\n  <dt>Shorthands</dt><dd></dd>\n  <% var keys = Object.keys(short) -%>\n  <% for (var i = 0; i < keys.length; i ++) { -%>\n    <dt><%= short[keys[i]] %></dt>\n    <dd><%= keys[i] %></dd>\n  <% } -%>\n</dl>\n"
   , __filename = undefined;
 try {
   var __output = [];
   with (locals || {}) {
-  __output.push('<table class="table sortable-theme-bootstrap" data-sortable>\n');
+  __output.push('<table class="table" data-searching="false" data-paging="false" data-scrollX="true">\n');
   __line = 2;
 var short = {
      'Tijeras Creek'      : 'TC'
@@ -90,64 +90,64 @@ var data = players[i]
 ; __output.push('    ');
   __line = 19;
 var tot = 0, sum, mSum = 0
-; __output.push('    <tr>\n      <th data-sortable="false"\n          data-value="'
-  , escape((__line = 22, data.label.split(' ').reverse().join(', ')))
+; __output.push('    <tr>\n      <th data-value="'
+  , escape((__line = 21, data.label.split(' ').reverse().join(', ')))
   , '">\n        '
-  , escape((__line = 23, data.label.split(' ')[1]))
+  , escape((__line = 22, data.label.split(' ')[1]))
   , '\n      </th>\n      <td>'
-  , escape((__line = 25, data.data[0]))
+  , escape((__line = 24, data.data[0]))
   , '</td>\n      ');
-  __line = 26;
+  __line = 25;
 sum = data.data[0]
 ; __output.push('      ');
-  __line = 27;
+  __line = 26;
 for (var j = 1; j < courses.length; j ++) {
 ; __output.push('        ');
-  __line = 28;
+  __line = 27;
 if (data.data[j] == null) {
-; __output.push('          <td data-value="9999999999"></td>\n          ');
-  __line = 30;
+; __output.push('          <td></td>\n          ');
+  __line = 29;
 continue
 ; __output.push('        ');
-  __line = 31;
+  __line = 30;
 }
 ; __output.push('        <td>\n          '
-  , escape((__line = 33, data.data[j]))
+  , escape((__line = 32, data.data[j]))
   , '\n          ');
-  __line = 34;
+  __line = 33;
 tot ++
 ; __output.push('          ');
-  __line = 35;
+  __line = 34;
 sum += data.data[j]
 ; __output.push('          ');
-  __line = 36;
+  __line = 35;
 mSum += data.data[j]
 ; __output.push('        </td>\n      ');
-  __line = 38;
+  __line = 37;
 }
-; __output.push('      <th data-sortable="false">'
-  , escape((__line = 39, tot))
-  , '</th>\n      <th data-sortable="false">'
-  , escape((__line = 40, ( sum / (tot + 1)               ).toFixed(2)))
-  , '</th>\n      <th data-sortable="false">'
-  , escape((__line = 41, (mSum /  tot                    ).toFixed(2)))
-  , '</th>\n      <th data-sortable="false">'
-  , escape((__line = 42, (mSum /  tot      - data.data[0]).toFixed(2)))
+; __output.push('      <th>'
+  , escape((__line = 38, tot))
+  , '</th>\n      <th>'
+  , escape((__line = 39, ( sum / (tot + 1)               ).toFixed(2)))
+  , '</th>\n      <th>'
+  , escape((__line = 40, (mSum /  tot                    ).toFixed(2)))
+  , '</th>\n      <th>'
+  , escape((__line = 41, (mSum /  tot      - data.data[0]).toFixed(2)))
   , '</th>\n    </tr>\n  ');
-  __line = 44;
+  __line = 43;
 }
 ; __output.push('</tbody>\n</table>\n<dl class="dl-horizontal">\n  <dt>Shorthands</dt><dd></dd>\n  ');
-  __line = 49;
+  __line = 48;
 var keys = Object.keys(short)
 ; __output.push('  ');
-  __line = 50;
+  __line = 49;
 for (var i = 0; i < keys.length; i ++) {
 ; __output.push('    <dt>'
-  , escape((__line = 51, short[keys[i]]))
+  , escape((__line = 50, short[keys[i]]))
   , '</dt>\n    <dd>'
-  , escape((__line = 52, keys[i]))
+  , escape((__line = 51, keys[i]))
   , '</dd>\n  ');
-  __line = 53;
+  __line = 52;
 }
 ; __output.push('</dl>\n');
   }

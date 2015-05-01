@@ -23,7 +23,6 @@
     "chart.js": "nnnick/Chart.js#v1.0.2",
     "ejs-tj": "^2.3.2",
     "jquery": "^2.1.4",
-    "sortable": "HubSpot/sortable#v0.6.0",
     "uglifyjs": "^2.4.10"
   }
 }

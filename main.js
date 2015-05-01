@@ -66,8 +66,13 @@ $('#clear').click(function () {
   chart.update()
 })
 
-$('#mainTable').html(table({
+window.table = $('#mainTable').html(table({
   courses: datasets.courses
 , players: datasets
-}))
-Sortable.init()
+})).children().first().dataTable({
+  scrollX  : true
+/*
+  searching: false
+, paging   : false
+*/
+})
